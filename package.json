@@ -1,0 +1,20 @@
+{
+  "name": "hcp-job-processor",
+  "version": "1.0.0",
+  "description": "Pure job processing logic for HCP jobs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imrozzechrom-blip/hcp-job-processor.git"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
