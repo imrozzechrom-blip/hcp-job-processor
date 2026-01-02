@@ -1,8 +1,25 @@
 export interface IHcpJob {
     id: string;
-    total_amount: number;
-    created_at: Date;
-    completed_at?: Date | null;
+    created_at: string;
+    updated_at?: string;
+    completed_at?: string;
+    customer?: {
+        id?: string;
+        first_name?: string;
+        last_name?: string;
+        email?: string;
+        mobileNumber?: string;
+        homeNumber?: string;
+        phone?: string;
+        [key: string]: any;
+    };
+    address?: any;
+    work_status?: string;
+    total_amount?: number;
+    assigned_employees?: any[];
+    schedule?: any;
+    job_fields?: any;
+    [key: string]: any;
 }
 export interface ICompany {
     _id: string;
@@ -34,4 +51,12 @@ export interface ParentJob {
     created_at?: Date;
     updated_at?: Date;
     jobComponents: JobComponent[];
+}
+export interface IHistoricalAverage {
+    overallAverageRevenue: number;
+    sourceAverages: Record<string, number>;
+    subSourceAverages: Record<string, number>;
+    date: Date;
+    companyId: string;
+    [key: string]: any;
 }
